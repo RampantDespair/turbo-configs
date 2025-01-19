@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/jest",
+  "verbose": true,
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  }
+}
