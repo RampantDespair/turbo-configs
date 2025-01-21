@@ -7,6 +7,13 @@
     "browser/jest-preset.json",
     "node/jest-preset.json"
   ],
+  "scripts": {
+    "test": "jest",
+    "test:ci": "jest --ci",
+    "test:coverage": "jest --coverage",
+    "test:silent": "jest --silent",
+    "test:watch": "jest --watch"
+  },
   "jest": {
     "preset": "./node/jest-preset.json"
   },
