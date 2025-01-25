@@ -5,10 +5,12 @@
   "private": true,
   "workspaces": [
     "jest",
+    "prettier",
     "typescript"
   ],
   "devDependencies": {
     "@repo/config-jest": "*",
+    "@repo/config-prettier": "*",
     "@repo/config-typescript": "*"
   },
   "publishConfig": {
