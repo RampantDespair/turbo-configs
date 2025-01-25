@@ -1,0 +1,47 @@
+{
+  "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v10/terminal-keeper.json",
+  "theme": "tribe",
+  "active": "default",
+  "activateOnStartup": true,
+  "keepExistingTerminals": false,
+  "sessions": {
+    "default": [
+      {
+        "name": "root",
+        "icon": "server",
+        "color": "terminal.ansiWhite",
+        "cwd": "./",
+        "commands": [
+          ""
+        ]
+      },
+      {
+        "name": "cfg:jest",
+        "icon": "output",
+        "color": "terminal.ansiBrightRed",
+        "cwd": "./jest",
+        "commands": [
+          ""
+        ]
+      },
+      {
+        "name": "cfg:prettier",
+        "icon": "output",
+        "color": "terminal.ansiBrightGreen",
+        "cwd": "./prettier",
+        "commands": [
+          ""
+        ]
+      },
+      {
+        "name": "cfg:typescript",
+        "icon": "output",
+        "color": "terminal.ansiBrightBlue",
+        "cwd": "./typescript",
+        "commands": [
+          ""
+        ]
+      }
+    ]
+  }
+}
