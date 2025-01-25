@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@repo/configs",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "jest",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@repo/config-jest": "*",
+    "@repo/config-typescript": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
