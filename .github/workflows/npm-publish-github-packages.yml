@@ -1,17 +1,15 @@
 name: Publish Packages
-
 on:
   release:
     types: [created]
   push:
     branches: ["main"]
-    # Publish semver tags as releases.
     tags: ["v*.*.*"]
   pull_request:
     branches: ["main"]
 
 jobs:
-  build:
+  build-jest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,7 +20,6 @@ jobs:
       - run: npm test
 
   publish-typescript:
-    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -33,14 +30,12 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: cd typescript && npm version ${{ github.event.release.tag_name }} --no-git-tag-version
       - run: cd typescript && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   publish-jest:
-    needs: build
+    needs: build-jest
     runs-on: ubuntu-latest
     permissions:
       contents: read
