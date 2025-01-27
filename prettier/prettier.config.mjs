@@ -10,6 +10,7 @@ const config = {
     "prettier-plugin-organize-attributes",
     "prettier-plugin-organize-imports",
     "prettier-plugin-packagejson",
+    "prettier-plugin-prisma",
     "prettier-plugin-sql",
     "prettier-plugin-tailwindcss",
   ],
