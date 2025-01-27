@@ -3,6 +3,7 @@
   "name": "@repo/config-jest",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "files": [
     "browser/jest-preset.json",
     "node/jest-preset.json"
