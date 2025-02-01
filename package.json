@@ -7,7 +7,8 @@
   "workspaces": [
     "jest",
     "prettier",
-    "typescript"
+    "typescript",
+    "webpack"
   ],
   "devDependencies": {
     "@repo/config-jest": "*",

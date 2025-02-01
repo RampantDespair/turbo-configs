@@ -41,6 +41,15 @@
         "commands": [
           ""
         ]
+      },
+      {
+        "name": "cfg:webpack",
+        "icon": "output",
+        "color": "terminal.ansiBrightMagenta",
+        "cwd": "./webpack",
+        "commands": [
+          ""
+        ]
       }
     ]
   }
