@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./tsup.config.ts"
+    ".": "./tsup.config.mjs"
   },
   "devDependencies": {
     "@repo/config-typescript": "*",
