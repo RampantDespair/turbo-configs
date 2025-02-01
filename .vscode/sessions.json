@@ -34,6 +34,15 @@
         ]
       },
       {
+        "name": "cfg:tsup",
+        "icon": "output",
+        "color": "terminal.ansiBrightYellow",
+        "cwd": "./tsup",
+        "commands": [
+          ""
+        ]
+      },
+      {
         "name": "cfg:typescript",
         "icon": "output",
         "color": "terminal.ansiBrightBlue",

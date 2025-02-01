@@ -1,12 +1,15 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@repo/config-typescript",
+  "name": "@repo/config-tsup",
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./tsup.config.ts"
+  },
   "devDependencies": {
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3"
+    "@repo/config-typescript": "*",
+    "tsup": "^8.3.6"
   },
   "publishConfig": {
     "access": "public"
