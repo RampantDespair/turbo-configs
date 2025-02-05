@@ -16,8 +16,13 @@
   ],
   "devDependencies": {
     "@repo/config-jest": "*",
+    "@repo/config-postcss": "*",
     "@repo/config-prettier": "*",
-    "@repo/config-typescript": "*"
+    "@repo/config-stylelint": "*",
+    "@repo/config-tailwind": "*",
+    "@repo/config-tsup": "*",
+    "@repo/config-typescript": "*",
+    "@repo/config-webpack": "*"
   },
   "publishConfig": {
     "access": "public"
