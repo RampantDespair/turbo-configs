@@ -5,9 +5,16 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./tsup.config.mjs"
+    ".": {
+      "types": "./tsup.config.d.mts",
+      "default": "./tsup.config.mjs"
+    }
+  },
+  "scripts": {
+    "types": "tsc --build tsconfig.json"
   },
   "devDependencies": {
+    "@repo/config-typescript": "*",
     "tsup": "^8.3.6"
   },
   "publishConfig": {

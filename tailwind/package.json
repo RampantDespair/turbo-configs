@@ -5,9 +5,16 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./tailwind.config.mjs"
+    ".": {
+      "types": "./tailwind.config.d.mts",
+      "default": "./tailwind.config.mjs"
+    }
+  },
+  "scripts": {
+    "types": "tsc --build tsconfig.json"
   },
   "devDependencies": {
+    "@repo/config-typescript": "*",
     "tailwindcss": "^4.0.3"
   },
   "publishConfig": {

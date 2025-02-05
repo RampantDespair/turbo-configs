@@ -5,9 +5,16 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./stylelint.config.mjs"
+    ".": {
+      "types": "./stylelint.config.d.mts",
+      "default": "./stylelint.config.mjs"
+    }
+  },
+  "scripts": {
+    "types": "tsc --build tsconfig.json"
   },
   "devDependencies": {
+    "@repo/config-typescript": "*",
     "stylelint": "^16.14.1",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard": "^37.0.0",

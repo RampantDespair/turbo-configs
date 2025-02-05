@@ -5,9 +5,16 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./prettier.config.mjs"
+    ".": {
+      "types": "./prettier.config.d.mts",
+      "default": "./prettier.config.mjs"
+    }
+  },
+  "scripts": {
+    "types": "tsc --build tsconfig.json"
   },
   "devDependencies": {
+    "@repo/config-typescript": "*",
     "prettier": "^3.4.2",
     "prettier-plugin-css-order": "^2.1.2",
     "prettier-plugin-embed": "^0.4.15",

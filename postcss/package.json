@@ -5,9 +5,16 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./postcss.config.mjs"
+    ".": {
+      "types": "./postcss.config.d.mts",
+      "default": "./postcss.config.mjs"
+    }
+  },
+  "scripts": {
+    "types": "tsc --build tsconfig.json"
   },
   "devDependencies": {
+    "@repo/config-typescript": "*",
     "@tailwindcss/postcss": "^4.0.3",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
