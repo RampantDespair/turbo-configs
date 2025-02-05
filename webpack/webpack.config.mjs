@@ -4,21 +4,27 @@ import HtmlMinimizerPlugin from "html-minimizer-webpack-plugin";
 import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
 import JsonMinimizerPlugin from "json-minimizer-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
+
+const __dirname = import.meta.dirname;
+const paths = {
+  in: path.resolve(__dirname, "src"),
+  out: path.resolve(__dirname, "dist"),
+};
 
 /** @type {import("webpack").Configuration} */
 const config = {
-  entry: "./src/index.ts",
+  entry: path.resolve(paths.in, "index.ts"),
   output: {
     clean: true,
     filename: "[name].js",
-    path: "./dist",
+    path: path.resolve(paths.out, "dist"),
   },
   mode: process.env.NODE_ENV,
   devtool: process.env.NODE_ENV === "production" ? false : "source-map",
   module: {
     rules: [
-      "...",
       {
         test: /\.(css|scss|sass)$/i,
         use: [
@@ -73,7 +79,6 @@ const config = {
   optimization: {
     minimize: process.env.NODE_ENV === "production",
     minimizer: [
-      "...",
       new CssMinimizerPlugin({
         exclude: /\.min/,
       }),
