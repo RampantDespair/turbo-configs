@@ -18,6 +18,7 @@ const config = {
   devtool: process.env.NODE_ENV === "production" ? false : "source-map",
   module: {
     rules: [
+      "...",
       {
         test: /\.(css|scss|sass)$/i,
         use: [
