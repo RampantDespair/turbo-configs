@@ -25,6 +25,15 @@
         ]
       },
       {
+        "name": "cfg:postcss",
+        "icon": "output",
+        "color": "terminal.ansiBrightRed",
+        "cwd": "./postcss",
+        "commands": [
+          ""
+        ]
+      },
+      {
         "name": "cfg:prettier",
         "icon": "output",
         "color": "terminal.ansiBrightGreen",

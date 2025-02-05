@@ -6,6 +6,7 @@
   "type": "module",
   "workspaces": [
     "jest",
+    "postcss",
     "prettier",
     "stylelint",
     "tailwind",
