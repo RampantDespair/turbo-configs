@@ -34,6 +34,15 @@
         ]
       },
       {
+        "name": "cfg:tailwind",
+        "icon": "output",
+        "color": "terminal.ansiBrightCyan",
+        "cwd": "./tailwind",
+        "commands": [
+          ""
+        ]
+      },
+      {
         "name": "cfg:tsup",
         "icon": "output",
         "color": "terminal.ansiBrightYellow",

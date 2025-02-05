@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@repo/config-tailwind",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./tailwind.config.mjs"
+  },
+  "devDependencies": {
+    "@repo/config-typescript": "*",
+    "tailwindcss": "^4.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

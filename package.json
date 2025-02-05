@@ -7,6 +7,7 @@
   "workspaces": [
     "jest",
     "prettier",
+    "tailwind",
     "tsup",
     "typescript",
     "webpack"
