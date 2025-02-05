@@ -111,7 +111,18 @@ const config = {
       }),
     ],
   },
-  plugins: [new CopyWebpackPlugin(), new MiniCssExtractPlugin()],
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public",
+          to: ".",
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
+    new MiniCssExtractPlugin(),
+  ],
   resolve: {
     extensions: [".js", ".jsx", ".mjs", ".cjs", ".ts", ".tsx", ".mts", ".cts"],
   },
