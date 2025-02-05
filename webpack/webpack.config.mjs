@@ -19,7 +19,7 @@ const modeSchema = z
   .optional()
   .default("production");
 
-const createConfig = (env, argv) => {
+const createBaseConfig = (env, argv) => {
   const mode = modeSchema.parse(argv.mode);
 
   /** @type {import("webpack").Configuration} */
@@ -159,4 +159,4 @@ const createConfig = (env, argv) => {
   return config;
 };
 
-export default createConfig;
+export default createBaseConfig;
