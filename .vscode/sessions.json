@@ -34,6 +34,15 @@
         ]
       },
       {
+        "name": "cfg:stylelint",
+        "icon": "output",
+        "color": "terminal.ansiWhite",
+        "cwd": "./stylelint",
+        "commands": [
+          ""
+        ]
+      },
+      {
         "name": "cfg:tailwind",
         "icon": "output",
         "color": "terminal.ansiBrightCyan",
