@@ -1,7 +1,4 @@
-/**
- * https://prettier.io/docs/en/options
- * @type {import("prettier").Config}
- * */
+/** @type {import("prettier").Config} */
 const config = {
   tailwindFunctions: ["clsx", "tw"],
   plugins: [
