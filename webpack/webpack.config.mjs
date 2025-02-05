@@ -38,8 +38,30 @@ const config = {
         type: "asset/resource",
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif)$/i,
         type: "asset",
+      },
+      {
+        test: /\.svg$/i,
+        use: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              svgoConfig: {
+                plugins: [
+                  {
+                    name: "preset-default",
+                    params: {
+                      overrides: {
+                        removeViewBox: false,
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.(ts|tsx|mts|cts)$/i,

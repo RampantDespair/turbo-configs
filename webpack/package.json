@@ -8,6 +8,7 @@
     ".": "./webpack.config.mjs"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/file-loader": "^5.0.4",
     "@types/sass-loader": "^8.0.9",
     "@types/webpack-node-externals": "^3.0.4",
