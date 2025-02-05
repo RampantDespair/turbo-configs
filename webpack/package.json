@@ -5,9 +5,16 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./webpack.config.mjs"
+    ".": {
+      "types": "./webpack.config.d.mts",
+      "default": "./webpack.config.mjs"
+    }
+  },
+  "scripts": {
+    "types": "tsc --build tsconfig.json"
   },
   "devDependencies": {
+    "@repo/config-typescript": "*",
     "@svgr/webpack": "^8.1.0",
     "@types/file-loader": "^5.0.4",
     "@types/sass-loader": "^8.0.9",

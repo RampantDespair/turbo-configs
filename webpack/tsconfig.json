@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@repo/config-typescript/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./",
+    "declarationDir": "./",
+    "allowJs": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false
+  },
+  "include": ["webpack.config.mjs"],
+  "exclude": ["node_modules"]
+}
