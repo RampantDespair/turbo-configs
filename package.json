@@ -14,6 +14,9 @@
     "typescript",
     "webpack"
   ],
+  "scripts": {
+    "types": "turbo run types"
+  },
   "devDependencies": {
     "@repo/config-jest": "*",
     "@repo/config-postcss": "*",
@@ -22,8 +25,10 @@
     "@repo/config-tailwind": "*",
     "@repo/config-tsup": "*",
     "@repo/config-typescript": "*",
-    "@repo/config-webpack": "*"
+    "@repo/config-webpack": "*",
+    "turbo": "^2.4.0"
   },
+  "packageManager": "npm@11.1.0",
   "publishConfig": {
     "access": "public"
   }

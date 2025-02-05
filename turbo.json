@@ -1,0 +1,9 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "types": {
+      "outputs": ["*.d.mts", "*.d.mts.map"],
+      "dependsOn": ["^types"]
+    }
+  }
+}
