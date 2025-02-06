@@ -81,16 +81,16 @@ const createBaseConfig = (env, argv) => {
         {
           test: /\.(ts|tsx|mts|cts)$/i,
           use: "ts-loader",
-          exclude: /node_modules/,
         },
-      ],
+      ].map((rule) => ({
+        ...rule,
+        exclude: /node_modules/,
+      })),
     },
     optimization: {
       minimize: mode === "production",
       minimizer: [
-        new CssMinimizerPlugin({
-          exclude: /\.min/,
-        }),
+        new CssMinimizerPlugin(),
         new HtmlMinimizerPlugin(),
         new ImageMinimizerPlugin({
           minimizer: {
@@ -120,10 +120,14 @@ const createBaseConfig = (env, argv) => {
           },
         }),
         new JsonMinimizerPlugin(),
-        new TerserPlugin({
+        new TerserPlugin(),
+      ].map((minimizer) => {
+        minimizer.options = {
+          ...minimizer.options,
           exclude: /\.min/,
-        }),
-      ],
+        };
+        return minimizer;
+      }),
     },
     plugins: [
       new CopyWebpackPlugin({
@@ -150,7 +154,7 @@ const createBaseConfig = (env, argv) => {
       ],
     },
     stats: {
-      all: false,
+      all: true,
       errors: true,
       builtAt: true,
     },
