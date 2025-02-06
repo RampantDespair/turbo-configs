@@ -1,3 +1,38 @@
 {
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "jest.runMode": "on-demand",
+  "jest.virtualFolders": [
+    {
+      "name": "config-jest",
+      "rootPath": "jest"
+    },
+    {
+      "name": "config-postcss",
+      "rootPath": "postcss"
+    },
+    {
+      "name": "config-prettier",
+      "rootPath": "prettier"
+    },
+    {
+      "name": "config-stylelint",
+      "rootPath": "stylelint"
+    },
+    {
+      "name": "config-tailwind",
+      "rootPath": "tailwind"
+    },
+    {
+      "name": "config-tsup",
+      "rootPath": "tsup"
+    },
+    {
+      "name": "config-typescript",
+      "rootPath": "typescript"
+    },
+    {
+      "name": "config-webpack",
+      "rootPath": "webpack"
+    }
+  ]
 }
