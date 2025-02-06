@@ -39,9 +39,18 @@ const createBaseConfig = (env, argv) => {
         {
           test: /\.(css|scss|sass)$/i,
           use: [
-            MiniCssExtractPlugin.loader,
-            "style-loader",
-            "css-loader",
+            mode === "production"
+              ? MiniCssExtractPlugin.loader
+              : "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 2,
+                modules: {
+                  auto: true,
+                },
+              },
+            },
             "postcss-loader",
             "sass-loader",
           ],
