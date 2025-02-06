@@ -24,11 +24,13 @@ const createBaseConfig = (env, argv) => {
 
   /** @type {import("webpack").Configuration} */
   const config = {
-    entry: path.resolve(paths.in, "index.ts"),
+    entry: {
+      index: path.resolve(paths.in, "index.ts"),
+    },
     output: {
       clean: true,
       filename: "[name].js",
-      path: path.resolve(paths.out, "dist"),
+      path: paths.out,
     },
     mode: mode ?? "production",
     devtool: mode === "production" ? false : "source-map",
