@@ -1,4 +1,4 @@
-import CopyWebpackPlugin from "copy-webpack-plugin";
+import CopyPlugin from "copy-webpack-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import HtmlMinimizerPlugin from "html-minimizer-webpack-plugin";
 import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
@@ -132,7 +132,7 @@ const createBaseConfig = (env, argv) => {
       }),
     },
     plugins: [
-      new CopyWebpackPlugin({
+      new CopyPlugin({
         patterns: [
           {
             from: "public",
@@ -154,11 +154,6 @@ const createBaseConfig = (env, argv) => {
         ".mts",
         ".cts",
       ],
-    },
-    stats: {
-      all: true,
-      errors: true,
-      builtAt: true,
     },
   };
 
