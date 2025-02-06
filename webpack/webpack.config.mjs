@@ -84,10 +84,7 @@ const createBaseConfig = (env, argv) => {
           test: /\.(ts|tsx|mts|cts)$/i,
           use: "ts-loader",
         },
-      ].map((rule) => ({
-        ...rule,
-        exclude: /node_modules/,
-      })),
+      ],
     },
     optimization: {
       minimize: mode === "production",
