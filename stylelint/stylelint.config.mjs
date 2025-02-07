@@ -1,5 +1,5 @@
 /** @type {import("stylelint").Config} */
-const config = {
+export const baseConfig = {
   extends: [
     "stylelint-config-prettier-scss",
     "stylelint-config-standard",
@@ -9,20 +9,16 @@ const config = {
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: [
-          "tailwind",
-        ],
+        ignoreAtRules: ["tailwind"],
       },
     ],
     "scss/at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: [
-          "tailwind",
-        ],
+        ignoreAtRules: ["tailwind"],
       },
-    ]
+    ],
   },
 };
 
-export default config;
+export default baseConfig;

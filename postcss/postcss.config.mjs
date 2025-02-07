@@ -1,5 +1,5 @@
 /** @type {import("postcss-load-config").Config} */
-const config = {
+export const baseConfig = {
   plugins: {
     "@tailwindcss/postcss": {},
     "postcss-flexbugs-fixes": {},
@@ -26,4 +26,4 @@ const config = {
   },
 };
 
-export default config;
+export default baseConfig;

@@ -1,5 +1,5 @@
 /** @type {import("prettier").Config} */
-const config = {
+export const baseConfig = {
   tailwindFunctions: ["clsx", "tw"],
   plugins: [
     "prettier-plugin-css-order",
@@ -13,4 +13,4 @@ const config = {
   ],
 };
 
-export default config;
+export default baseConfig;

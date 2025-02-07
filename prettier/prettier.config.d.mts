@@ -1,4 +1,4 @@
-export default config;
 /** @type {import("prettier").Config} */
-declare const config: import("prettier").Config;
+export const baseConfig: import("prettier").Config;
+export default baseConfig;
 //# sourceMappingURL=prettier.config.d.mts.map

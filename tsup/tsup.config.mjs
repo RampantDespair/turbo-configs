@@ -1,7 +1,5 @@
-import { defineConfig } from "tsup";
-
-export default defineConfig({
-  target: "esnext",
+/** @type {import("tsup").Options} */
+export const baseConfig = {
   minify: true,
   minifyWhitespace: true,
   minifyIdentifiers: true,
@@ -11,6 +9,21 @@ export default defineConfig({
   sourcemap: true,
   noExternal: [],
   clean: true,
-  platform: "node",
   treeshake: true,
-});
+};
+
+/** @type {import("tsup").Options} */
+export const baseConfigBrowser = {
+  ...baseConfig,
+  target: "esnext",
+  platform: "browser",
+};
+
+/** @type {import("tsup").Options} */
+export const baseConfigNode = {
+  ...baseConfig,
+  target: "node22",
+  platform: "node",
+};
+
+export default baseConfig;

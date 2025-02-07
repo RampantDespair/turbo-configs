@@ -1,4 +1,4 @@
-export default config;
 /** @type {import("stylelint").Config} */
-declare const config: import("stylelint").Config;
+export const baseConfig: import("stylelint").Config;
+export default baseConfig;
 //# sourceMappingURL=stylelint.config.d.mts.map
