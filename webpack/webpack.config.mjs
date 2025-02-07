@@ -19,6 +19,12 @@ const modeSchema = z
   .optional()
   .default("production");
 
+/**
+ * Must override:
+ * - entry
+ * - output
+ * - resolve.alias
+ */
 export const createBaseConfig = (env, argv) => {
   const mode = modeSchema.parse(argv.mode);
 
@@ -160,6 +166,9 @@ export const createBaseConfig = (env, argv) => {
         ".mts",
         ".cts",
       ],
+      alias: {
+        "@": path.resolve(__dirname, "./"),
+      },
     },
   };
 
