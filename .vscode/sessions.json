@@ -16,6 +16,15 @@
         ]
       },
       {
+        "name": "cfg:eslint",
+        "icon": "output",
+        "color": "terminal.ansiBrightMagenta",
+        "cwd": "./eslint",
+        "commands": [
+          ""
+        ]
+      },
+      {
         "name": "cfg:jest",
         "icon": "output",
         "color": "terminal.ansiBrightRed",

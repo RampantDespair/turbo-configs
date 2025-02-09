@@ -3,6 +3,10 @@
   "jest.runMode": "on-demand",
   "jest.virtualFolders": [
     {
+      "name": "config-eslint",
+      "rootPath": "eslint"
+    },
+    {
       "name": "config-jest",
       "rootPath": "jest"
     },

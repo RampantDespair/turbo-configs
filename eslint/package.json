@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@repo/config-eslint",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./eslint.config.d.mts",
+      "default": "./eslint.config.mjs"
+    }
+  },
+  "scripts": {
+    "types": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@repo/config-typescript": "*",
+    "eslint": "^9.20.0",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.23.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

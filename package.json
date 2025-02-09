@@ -5,6 +5,7 @@
   "private": true,
   "type": "module",
   "workspaces": [
+    "eslint",
     "jest",
     "postcss",
     "prettier",
@@ -18,6 +19,7 @@
     "types": "turbo run types"
   },
   "devDependencies": {
+    "@repo/config-eslint": "*",
     "@repo/config-jest": "*",
     "@repo/config-postcss": "*",
     "@repo/config-prettier": "*",
