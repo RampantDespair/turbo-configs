@@ -17,6 +17,19 @@ export const baseConfig = [
   // syntax rules
   jsLint.configs.recommended,
   ...tsLint.configs.recommended,
+  // specific rules
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
   // ignore rules
   {
     ignores: ["node_modules", "dist", "build", "coverage", "public"],
