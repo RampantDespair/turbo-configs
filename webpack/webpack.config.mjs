@@ -103,6 +103,10 @@ export const createBaseConfig = (env, argv) => {
           use: [
             {
               loader: "ts-loader",
+              exclude: /node_modules/,
+              options: {
+                compilerOptions: {},
+              },
             },
           ],
         },
