@@ -1,4 +1,3 @@
-import CopyPlugin from "copy-webpack-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import HtmlMinimizerPlugin from "html-minimizer-webpack-plugin";
 import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
@@ -143,18 +142,7 @@ export const createBaseConfig = (env, argv) => {
         return minimizer;
       }),
     },
-    plugins: [
-      new CopyPlugin({
-        patterns: [
-          {
-            from: "public",
-            to: ".",
-            noErrorOnMissing: true,
-          },
-        ],
-      }),
-      new MiniCssExtractPlugin(),
-    ],
+    plugins: mode === "production" ? [new MiniCssExtractPlugin()] : [],
     resolve: {
       extensions: [
         ".js",
