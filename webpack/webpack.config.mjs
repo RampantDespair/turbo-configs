@@ -13,7 +13,7 @@ const paths = {
   out: path.resolve(__dirname, "dist"),
 };
 
-const modeSchema = z
+export const modeSchema = z
   .enum(["development", "production", "none"])
   .optional()
   .default("production");
