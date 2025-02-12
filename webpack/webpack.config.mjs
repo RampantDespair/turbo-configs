@@ -62,7 +62,11 @@ export const createBaseConfig = (env, argv) => {
         },
         {
           test: /\.html$/i,
-          loader: "html-loader",
+          use: [
+            {
+              loader: "html-loader",
+            },
+          ],
         },
         {
           test: /\.json$/i,
@@ -96,7 +100,11 @@ export const createBaseConfig = (env, argv) => {
         },
         {
           test: /\.(ts|tsx|mts|cts)$/i,
-          use: "ts-loader",
+          use: [
+            {
+              loader: "ts-loader",
+            },
+          ],
         },
       ],
     },
