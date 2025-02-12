@@ -16,7 +16,9 @@
     "webpack"
   ],
   "scripts": {
-    "types": "turbo run types"
+    "check": "npm-check-updates -u && npm install",
+    "types": "turbo run types",
+    "update": "tsx update"
   },
   "devDependencies": {
     "@repo/config-eslint": "*",
@@ -28,7 +30,8 @@
     "@repo/config-tsup": "*",
     "@repo/config-typescript": "*",
     "@repo/config-webpack": "*",
-    "turbo": "^2.4.0"
+    "npm-check-updates": "^17.1.14",
+    "turbo": "^2.4.1"
   },
   "packageManager": "npm@11.1.0",
   "publishConfig": {
