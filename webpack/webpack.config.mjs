@@ -44,9 +44,15 @@ export const createBaseConfig = (env, argv) => {
         {
           test: /\.(css|scss|sass)$/i,
           use: [
-            mode === "production"
-              ? MiniCssExtractPlugin.loader
-              : "style-loader",
+            {
+              loader:
+                mode === "production"
+                  ? MiniCssExtractPlugin.loader
+                  : "style-loader",
+              options: {
+                esModule: false,
+              },
+            },
             {
               loader: "css-loader",
               options: {
@@ -54,6 +60,7 @@ export const createBaseConfig = (env, argv) => {
                 modules: {
                   auto: true,
                 },
+                esModule: false,
               },
             },
             "postcss-loader",
