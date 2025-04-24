@@ -30,10 +30,10 @@
     "@repo/config-tsup": "*",
     "@repo/config-typescript": "*",
     "@repo/config-webpack": "*",
-    "npm-check-updates": "^17.1.14",
-    "turbo": "^2.4.1"
+    "npm-check-updates": "^18.0.1",
+    "turbo": "^2.5.1"
   },
-  "packageManager": "npm@11.1.0",
+  "packageManager": "npm@11.3.0",
   "publishConfig": {
     "access": "public"
   }

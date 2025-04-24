@@ -14,12 +14,12 @@
     "types": "tsc --build tsconfig.json"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^1.0.0",
-    "@eslint/js": "^9.20.0",
+    "@eslint/config-inspector": "^1.0.2",
+    "@eslint/js": "^9.25.1",
     "@repo/config-typescript": "*",
-    "eslint": "^9.20.1",
-    "globals": "^15.15.0",
-    "typescript-eslint": "^8.24.0"
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "typescript-eslint": "^8.31.0"
   },
   "publishConfig": {
     "access": "public"
